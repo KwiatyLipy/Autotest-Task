@@ -21,7 +21,7 @@ class autotest(unittest.TestCase):
 	def setUp(self):
     	#self.driver = webdriver.Firefox()
     	#self.driver = webdriver.Ie(r'C:\Users\Justyna\Desktop\Python\Drivers\MicrosoftWebDriver.exe')
-		self.driver = webdriver.Chrome(r'C:\Users\Justyna\Desktop\Python\chromedriver.exe')
+		self.driver = webdriver.Chrome()
 		#self.driver = webdriver.Remote(command_executor='http://localhost:4444/',desired_capabilities=DesiredCapabilities.CHROME) 
 		self.driver.implicitly_wait(10)
 		self.driver.delete_all_cookies()
