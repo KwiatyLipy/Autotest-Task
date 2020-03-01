@@ -14,7 +14,7 @@ def check_element(driver, how, what, error_exp_text, tekst):
 	try:
 		element = driver.find_element(how, what)
 	except NoSuchElementException as error:
-		screenshot(driver, tekst)
+		#screenshot(driver, tekst)
 		print(error_exp_text + " \r\n %s" % error)
 	return element
 
@@ -22,7 +22,7 @@ def assertion(driver, what, withwhat, error_text, tekst):
 	try:
 		assert what.text == withwhat
 	except AssertionError as error:
-		screenshot(driver, tekst)
+		#screenshot(driver, tekst)
 		_, _, tb = sys.exc_info()
 		traceback.print_tb(tb) # Fixed format
 		tb_info = traceback.extract_tb(tb)
@@ -30,9 +30,10 @@ def assertion(driver, what, withwhat, error_text, tekst):
 		print(error_text + "\r\n")
 		print('An error occurred on line {} in statement {}'.format(line, text))
 	return 
-
+'''
 def screenshot(driver, tekst):
 	screen = self.path + "\\" + tekst + str(self.scr) + '.png'
 	self.scr = self.scr + 1
 	self.save_screenshot(screen)
 	return 
+'''

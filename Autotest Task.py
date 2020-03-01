@@ -13,10 +13,10 @@ from functions import *
 
 class autotest(unittest.TestCase):
 
-	scr=0
-	folder = strftime("%Y-%m-%d %H.%M.%S", gmtime()) 
-	path = r"C:\Users\Justyna\Desktop\Python" + "\\" + folder
-	Path(path).mkdir(parents=True, exist_ok=True)
+	#scr=0
+	#folder = strftime("%Y-%m-%d %H.%M.%S", gmtime()) 
+	#path = r"C:\Users\Justyna\Desktop\Python" + "\\" + folder
+	#Path(path).mkdir(parents=True, exist_ok=True)
 
 	def setUp(self):
     	#self.driver = webdriver.Firefox()
